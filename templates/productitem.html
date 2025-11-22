@@ -1,0 +1,23 @@
+<div class="border-bottom" style="margin-bottom:16px;padding-bottom:4px">
+    <h4 style="color:rgb(120,120,120); margin bottom:4px;">
+        {{product['title']}}
+    </h4>
+
+    <!-- Conditional link based on the product title -->
+    {% if product['title'] == 'T-Shirt' %}
+        <!-- Link for the T-Shirt -->
+        <a href="tshirt_photos_page.html" class="custom-outline-button" target="_blank">
+            Apply
+        </a>
+    {% elif product['title'] == 'Hoodie' %}
+        <!-- Link for the Hoodie -->
+        <a href="hoodie_photos_page.html" class="custom-outline-button" target="_blank">
+            Apply
+        </a>
+    {% else %}
+        <!-- Default link for any other product -->
+        <a href="#" class="custom-outline-button">
+            Apply
+        </a>
+    {% endif %}
+</div>
